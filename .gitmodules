@@ -2,3 +2,6 @@
     path = fairseq/model_parallel/megatron
     url = https://github.com/ngoyal2707/Megatron-LM
     branch = fairseq
+[submodule "fairseq_tuformer"]
+	path = fairseq_tuformer
+	url = https://github.com/xliu1231/fairseq_tuformer.git

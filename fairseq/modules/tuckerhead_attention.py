@@ -36,6 +36,7 @@ class TuckerheadAttention(nn.Module):
         q_noise=0.0,
         qn_block_size=8,
         num_heads=4,
+        ratio=1.0,
     ):
         super().__init__()
         self.embed_dim = embed_dim
@@ -138,7 +139,7 @@ class TuckerheadAttention(nn.Module):
         is_tpu = query.device.type == "xla"
 
         tgt_len, bsz, embed_dim = query.size()
-        
+
         src_len = tgt_len
         assert embed_dim == self.embed_dim, f"query dim {embed_dim} != {self.embed_dim}"
         assert list(query.size()) == [tgt_len, bsz, embed_dim]
