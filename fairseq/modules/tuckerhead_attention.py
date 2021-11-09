@@ -139,7 +139,7 @@ class TuckerheadAttention(nn.Module):
         is_tpu = query.device.type == "xla"
 
         tgt_len, bsz, embed_dim = query.size()
-        
+
         src_len = tgt_len
         assert embed_dim == self.embed_dim, f"query dim {embed_dim} != {self.embed_dim}"
         assert list(query.size()) == [tgt_len, bsz, embed_dim]
