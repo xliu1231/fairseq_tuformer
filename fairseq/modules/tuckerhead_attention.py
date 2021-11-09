@@ -36,6 +36,7 @@ class TuckerheadAttention(nn.Module):
         q_noise=0.0,
         qn_block_size=8,
         num_heads=4,
+        ratio=1.0,
     ):
         super().__init__()
         self.embed_dim = embed_dim
